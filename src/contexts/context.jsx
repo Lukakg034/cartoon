@@ -14,13 +14,18 @@ export const DataProvider = ({ children }) => {
 
   // const [videoThumbnail, setVideoThumbnail] = useState("");
   const [videoUrl, setVideoUrl] = useState("");
+  const [dataLoaded, setDataLoaded] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("/db.json");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status ${response.status}`);
+        }
         const jsonData = await response.json();
-        setData(jsonData);
+        setData(jsonData); // setting data from the json array for search results in navigation
+        setDataLoaded(true); // setting loaded state to false once it finishes loading
         setVideoUrl(jsonData[0].episodes[0].videoURL);
 
         setAllEpisodes(
@@ -29,7 +34,8 @@ export const DataProvider = ({ children }) => {
           })
         );
       } catch (error) {
-        console.log(error);
+        console.log("Fetch error", error);
+        setDataLoaded(false);
       }
     };
 
@@ -69,14 +75,11 @@ export const DataProvider = ({ children }) => {
     episodeDescription,
     episodeYear,
     tvShowEpisodes,
+    dataLoaded,
   };
-  // console.log(tvShowEpisodes);
-  //   console.log(data);
-  //   console.log(episodeNumber);
-  //   console.log(episodeDescription);
-  //   console.log(videoUrl);
-  //   console.log(titleList);
-  //   console.log(allEpisodes);
+  console.log(
+    data.length > 0 ? data[0].episodes.length : "Data is not ready yet"
+  );
   return (
     <MovieDataContext.Provider value={contextValue}>
       {children}

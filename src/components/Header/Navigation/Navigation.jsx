@@ -1,13 +1,12 @@
 import { AppBar, Toolbar, Typography, IconButton } from "@mui/material";
 import MovieIcon from "@mui/icons-material/Movie";
 import Search from "./Search/SearchField";
-
-const navigationItems = ["Home", "Profile", "Login"];
+import Links from "./Links";
 
 export default function Navigation() {
   return (
     <AppBar color="secondary" position="sticky">
-      <Toolbar variant="regular">
+      <Toolbar variant="regular" justify-content="space-between">
         <IconButton>
           <MovieIcon />
         </IconButton>
@@ -15,6 +14,7 @@ export default function Navigation() {
           Old Skul cartoons
         </Typography>
         <Search />
+        <Links />
       </Toolbar>
     </AppBar>
   );

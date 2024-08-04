@@ -838,5 +838,22 @@
         "director": "Oleg Kuzovkov"
       }
     ]
+  },
+  {
+    "label": "Lucky Luke",
+    "id": 3,
+    "episodes": [
+      {
+        "episode": 1,
+        "episodeTitle": "Luke on west",
+        "year": 2007,
+        "network": "Annimacord",
+        "length": "13:45",
+        "videoURL": "example.com/video.mp4",
+        "thumbnail": "example.com/image.jpg",
+        "description": "description example",
+        "director": "Oleg Kuzovkov"
+      }
+    ]
   }
 ]

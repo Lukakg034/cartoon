@@ -1,32 +1,38 @@
-// import { Card } from "@mui/material";
 import Navigation from "./components/Header/Navigation/Navigation";
-// import Search from "./components/Header/Navigation/Search/SearchField";
-// import BaseButton from "./components/common/Button/BaseButton";
-// import SignupButton from "./components/common/Button/SignupButton";
-// import TestButton from "./components/common/Button/TestButton";
+import Login from "./components/Form/LogIn";
+import Card from "./components/MainPage/Card/Card";
 import { DataProvider } from "./contexts/context";
 import ActionAreaCard from "./components/MainPage/Card/Card";
-import DrawerNavigation from "./components/Header/Navigation/DrawerNavigation";
-import { Box } from "@mui/material";
 import "./app.css";
+import { useContext, useState } from "react";
+import UserContext, { UserContextProvider } from "./contexts/userContext";
+import AppPagination from "./components/pagination/Pagination";
 
 function App() {
+  // const [isLoggedIn, setIsLoggedIn] = useState();
+  const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);
   return (
-    <>
-      <DataProvider>
-        <div className="wrapper" id="wrapper">
-          <Navigation />
-
-          {/* <VideoPlayer1 /> */}
-
-          <ActionAreaCard />
-        </div>
-        {/* <Search />
-        <BaseButton />
-        <SignupButton /> */}
-        {/* <TestButton /> */}
-      </DataProvider>
-    </>
+    // <UserContextProvider>
+    //   <DataProvider>
+    //     {isLoggedIn ? (
+    //       <div className="wrapper" id="wrapper">
+    //         <Navigation />
+    //         <ActionAreaCard />
+    //       </div>
+    //     ) : (
+    //       <Login onLoginSuccess={() => setIsLoggedIn(true)} />
+    //     )}
+    //     {/* <TestButton /> */}
+    //   </DataProvider>
+    // </UserContextProvider>
+    <DataProvider>
+      <div className="wrapper" id="wrapper">
+        <Navigation />
+        <ActionAreaCard />
+        <AppPagination />
+        {/* <AppPagination /> */}
+      </div>
+    </DataProvider>
   );
 }
 

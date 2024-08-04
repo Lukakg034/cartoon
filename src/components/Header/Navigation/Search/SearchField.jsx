@@ -11,7 +11,14 @@ export default function Search() {
       id="combo-box-demo"
       options={data}
       sx={{ width: 450 }}
-      renderInput={(params) => <TextField {...params} label="Search..." />}
+      renderInput={(params) => (
+        <TextField
+          {...params}
+          label="Search..."
+          variant="filled"
+          color="primary"
+        />
+      )}
     />
   );
 }

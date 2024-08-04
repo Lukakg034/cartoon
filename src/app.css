@@ -1,4 +1,13 @@
 #wrapper {
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
 }

@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 
 import Typography from "@mui/material/Typography";
 import { CardActionArea, CardHeader, Grid } from "@mui/material";
-
+import "./Card.css";
 export default function ActionAreaCard() {
   const {
     titleList,
@@ -27,7 +27,7 @@ export default function ActionAreaCard() {
           sm={6}
           xs={12}
           key={index}
-          height={420}
+          height={460}
           overflow={"hidden"}
         >
           <Card
@@ -35,6 +35,7 @@ export default function ActionAreaCard() {
               maxWidth: 780,
             }}
             key={index}
+            className="card"
           >
             <CardHeader
               title={`${title}`}
