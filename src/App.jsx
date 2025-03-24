@@ -47,7 +47,7 @@
 
 // export default App;
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Container, Grid } from "@mui/material";
 import CartoonCard from "./components/CartoonCard";
 import CartoonEpisodes from "./components/CartoonEpisodes";
