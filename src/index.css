@@ -16,12 +16,13 @@
 } */
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  /* margin: 0;
+  min-width: 320px; */
   min-height: 100vh;
-  position: relative;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* .content {
   display: flex;

@@ -4,7 +4,8 @@ import { Autocomplete, TextField } from "@mui/material";
 
 export default function Search() {
   const { data } = useContext(MovieDataContext);
-  // console.log(data);
+  console.log(data);
+  // console.log(data[7].episodes[5].videoURL);
   return (
     <Autocomplete
       disablePortal

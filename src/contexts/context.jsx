@@ -64,6 +64,7 @@ export const DataProvider = ({ children }) => {
       setEpisodeYear(tvShowYear);
       setTvShowEpisodes(tvShowEpisodes);
     }
+    // console.log(data.titleList);
   }, [data]);
 
   const contextValue = {
@@ -77,9 +78,10 @@ export const DataProvider = ({ children }) => {
     tvShowEpisodes,
     dataLoaded,
   };
-  console.log(
-    data.length > 0 ? data[0].episodes.length : "Data is not ready yet"
-  );
+  // console.log(
+  //   data.length > 0 ? data[0].episodes.length : "Data is not ready yet"
+  // );
+
   return (
     <MovieDataContext.Provider value={contextValue}>
       {children}

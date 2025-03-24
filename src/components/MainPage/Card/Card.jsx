@@ -1,5 +1,5 @@
-import MovieDataContext from "../../../contexts/context";
-import { useContext } from "react";
+// import MovieDataContext from "../../../contexts/context";
+// import { useContext } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -7,18 +7,24 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, CardHeader, Grid } from "@mui/material";
 import "./Card.css";
-export default function ActionAreaCard() {
-  const {
-    titleList,
-    episodeNumber,
-    episodeDescription,
-    episodeYear,
-    tvShowEpisodes,
-  } = useContext(MovieDataContext);
-
+export default function ActionAreaCard({ episodes }) {
+  // const {
+  //   titleList,
+  //   episodeNumber,
+  //   episodeDescription,
+  //   episodeYear,
+  //   tvShowEpisodes,
+  // } = useContext(MovieDataContext);
+  // console.log(episodes);
+  // console.log(
+  //   episodes.map((episode, index) => {
+  //     console.log(episode, index);
+  //   })
+  // );
   return (
     <Grid item container spacing={1}>
-      {titleList.map((title, index) => (
+      {/* {titleList.map((title, index) => ( */}
+      {episodes.map((episode, index) => (
         <Grid
           item
           xl={4}
@@ -38,22 +44,16 @@ export default function ActionAreaCard() {
             className="card"
           >
             <CardHeader
-              title={`${title}`}
-              subheader={`${episodeYear[index]}, Ep. ${episodeNumber[index]}`}
+              title={`${episode.episodeTitle}`}
+              subheader={`${episode.year}, Ep. ${episode.episode}`}
             />
             <CardActionArea>
-              {/* <CardMedia
-                component="img"
-                height="300"
-                image={`./images/picture_${index + 1}.jpg`}
-                alt="green iguana"
-              /> */}
               <CardMedia>
                 <iframe
                   width="640"
                   height="360"
                   frameBorder="0"
-                  src={tvShowEpisodes[index]}
+                  src={episode.videoUrl}
                   allowFullScreen
                 ></iframe>
               </CardMedia>
@@ -63,7 +63,7 @@ export default function ActionAreaCard() {
                   color="text.secondary"
                   fontSize={22}
                 >
-                  {episodeDescription[index]}
+                  {/* {episodeDescription[index]} */}
                 </Typography>
               </CardContent>
             </CardActionArea>

@@ -2,13 +2,14 @@ import { Pagination } from "@mui/material";
 import "./pagination.css";
 import { useContext, useEffect, useState } from "react";
 import MovieDataContext from "../../contexts/context";
+import ActionAreaCard from "../MainPage/Card/Card";
 
 const episodesPerPage = 12;
 
 export default function AppPagination() {
   const { data, dataLoaded } = useContext(MovieDataContext);
   const [currentPage, setCurrentPage] = useState(1);
-
+  // console.log(data);
   //Calculate the total number of pages
   //! Conditional rendering while checking if the data is populated with list of episodes
   if (!dataLoaded) {
@@ -34,19 +35,15 @@ export default function AppPagination() {
 
   return (
     <div className="paginationContainer">
+      <div className="episodeList">
+        <ActionAreaCard episodes={currentEpisodes} />
+      </div>
       <Pagination
         page={currentPage}
         onChange={handlePageChange}
         color="secondary"
         count={numberOfPages}
       />
-      <div className="episodeList">
-        {currentEpisodes.map((episode, index) => (
-          <div key={index} className="episodeItem">
-            <h3>{episode.title}</h3>
-          </div>
-        ))}
-      </div>
     </div>
   );
 }
