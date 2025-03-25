@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Card, CardContent, Typography, Grid, Button } from "@mui/material";
-import ReactPlayer from "react-player";
 import Pagination from "@mui/material/Pagination";
 
 const CartoonEpisodes = ({ cartoon, onBack }) => {
@@ -48,19 +47,15 @@ const CartoonEpisodes = ({ cartoon, onBack }) => {
                 {/* <Typography variant="body2" color="text.secondary">
                   {episode.description}
                 </Typography> */}
-                <ReactPlayer
-                  light={
-                    <img width={600} height={300} src={episode.thumbnail} />
-                  }
-                  volume={0.2}
-                  dragable="false"
-                  url={episode.videoUrl}
-                  controls
+                <iframe
                   width="100%"
-                  height="100%"
-                  playing={index === currentEpisodeIndex}
-                  onEnded={handleEnded}
-                />
+                  height="315"
+                  src={episode.videoUrl}
+                  title={episode.episodeTitle}
+                  frameborder="0"
+                  allowFullScreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                ></iframe>
               </CardContent>
             </Card>
           </Grid>

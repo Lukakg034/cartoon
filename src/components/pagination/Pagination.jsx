@@ -1,6 +1,6 @@
 import { Pagination } from "@mui/material";
 import "./pagination.css";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import MovieDataContext from "../../contexts/context";
 import ActionAreaCard from "../MainPage/Card/Card";
 

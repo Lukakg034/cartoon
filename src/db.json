@@ -11,7 +11,7 @@
         "year": 1940,
         "network": "CBS",
         "length": "00:00",
-        "videoUrl": "//watchadsontape.com/get_video?id=gvOeWqlzWBH42P&expires=1742810317&ip=F0qWKRWNFI9XKxR&token=Wx-ntsOCIc_W&stream=1",
+        "videoUrl": "https://watchadsontape.com/e/gvOeWqlzWBH42P/001_Tom_%26_Jerry_Puss_Gets_the_Boot_%5B1940%5D.avi.mp4",
         "thumbnail": "https://thumb.tapecontent.net/thumb/gvOeWqlzWBH42P/qjAXrL1dyRUzPpm.jpg",
         "description": "Tom chases Jerry all over their house, while Jerry foils Tom's plans to catch him. Tom breaks a lot of things in the house, while chasing Jerry, but that's when Mammy steps in. Mammy is Tom's owner. She tells him that if he breaks one more thing in the house, she's going to throw him outside. So, Jerry knocks over a lot of things in the house to make Mammy think Tom did it, and kick him outside. Tom tries his hardest to keep all these things from falling, so he won't be thrown outside.",
         "director": ["William Hanna", "Joseph Barbera"]
@@ -23,7 +23,7 @@
         "year": 1941,
         "network": "CBS",
         "length": "00:00",
-        "videoUrl": "//watchadsontape.com/get_video?id=D4dOYOp2Q2Ukr1q&expires=1742810392&ip=F0qWKRWNFI9XKxR&token=GrFFfDhHwZpA&stream=1",
+        "videoUrl": "https://watchadsontape.com/e/D4dOYOp2Q2Ukr1q/002_Tom_%26_Jerry_The_Midnight_Snack_%5B1941%5D.avi.mp4",
         "thumbnail": "https://thumb.tapecontent.net/thumb/D4dOYOp2Q2Ukr1q/djzRjLAG6JHkya4.jpg",
         "description": "Jerry decides to have a midnight snack. And what better than to have some nice, fresh cheese! He takes some from the fridge, but before he can eat it, Tom chases him for it. After breaking a lot of things, when chasing Jerry, Mammy hears the noise and comes down in a huff. Scared, Tom throws Jerry into the fridge to hide him. A bit later, Mammy finds Jerry in the fridge. She gets really angry, and throws Tom of out of the house. While Mammy is doing that, Jerry grabs the cheese, and finally eats it.",
         "director": ["William Hanna", "Joseph Barbera"]
@@ -1452,7 +1452,7 @@
         "year": 2,
         "network": "",
         "length": "",
-        "videoUrl": "example.com/video.mp4",
+        "videoUrl": "//watchadsontape.com/get_video?id=kkvMYVjpxJuy93&expires=1742920578&ip=F0qWKRWNFI9XKxR&token=zJr5iDa103w9&stream=1",
         "thumbnail": "example.com/image.jpg",
         "description": "description example",
         "director": ""
