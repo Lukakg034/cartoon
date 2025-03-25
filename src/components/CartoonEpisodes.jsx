@@ -38,7 +38,7 @@ const CartoonEpisodes = ({ cartoon, onBack }) => {
       </Button>
       <Grid container spacing={4}>
         {currentEpisodes.map((episode, index) => (
-          <Grid item key={episode.episode} xs={4}>
+          <Grid item key={episode.episode} xs={12} sm={6} md={4}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -49,10 +49,10 @@ const CartoonEpisodes = ({ cartoon, onBack }) => {
                 </Typography> */}
                 <iframe
                   width="100%"
-                  height="315"
+                  height="250"
                   src={episode.videoUrl}
-                  title={episode.episodeTitle}
-                  frameborder="0"
+                  // title={episode.episodeTitle}
+                  frameBorder="0"
                   allowFullScreen
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 ></iframe>

@@ -10,7 +10,7 @@ import {
 import "./CartoonCard.css";
 const CartoonCard = ({ cartoon, onClick }) => {
   return (
-    <Grid item xs={12} sm={3} md={3} onClick={() => onClick(cartoon)}>
+    <Grid item xs={12} sm={6} md={4} onClick={() => onClick(cartoon)}>
       <Card sx={{ height: "350px", width: "250px" }}>
         <CardActionArea>
           <CardMedia
