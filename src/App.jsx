@@ -51,7 +51,7 @@ import { useState } from "react";
 import { Container, Grid } from "@mui/material";
 import CartoonCard from "./components/CartoonCard";
 import CartoonEpisodes from "./components/CartoonEpisodes";
-import db from "./db.json";
+import db from "./db copyV005.json";
 import "./App.css";
 
 const App = () => {
